@@ -25,4 +25,11 @@ export class ProfilePage {
     console.log('Hello Profile Page');
   }
 
+  login(){
+    this.auth.login();
+  }
+
+  logout(){
+    this.auth.logout();
+  }
 }
