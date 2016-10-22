@@ -6,14 +6,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 import {Push, PushToken} from '@ionic/cloud-angular';
 import {ProfilePage} from '../pages/profile/profile';
 import {Deploy} from '@ionic/cloud-angular';
-
+import {AuthService} from '../services/auth/auth.service';
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
   rootPage = ProfilePage;
 
-  constructor(platform: Platform, public push: Push, public deploy: Deploy) {
+  constructor(platform: Platform, public push: Push, public deploy: Deploy, private auth: AuthService) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -34,6 +34,8 @@ export class MyApp {
         alert(msg.title + ': ' + msg.text);
       });
    
+      // Schedule a token refresh on app start up
+      auth.startupTokenRefresh();
     
   }
 }

@@ -8,6 +8,11 @@ import {AuthService} from '../../services/auth/auth.service';
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
+
+// Avoid name not found warnings
+declare var Auth0: any;
+declare var Auth0Lock: any;
+
 @Component({
   selector: 'page-profile',
   templateUrl: 'profile.html'

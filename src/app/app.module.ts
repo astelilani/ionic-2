@@ -10,7 +10,7 @@ import {Deploy} from '@ionic/cloud-angular';
 // import {LoginPage} from '../pages/login/login';
 import {ProfilePage} from '../pages/profile/profile';
 import { AuthConfig, AuthHttp } from 'angular2-jwt';
-//import { AuthService } from '../services/auth/auth.service';
+import { AuthService } from '../services/auth/auth.service';
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
 
@@ -66,7 +66,7 @@ const cloudSettings: CloudSettings = {
     ProfilePage
   ],
   providers: [
-    //AuthService,
+    AuthService,
     {
       provide: AuthHttp,
       useFactory: getAuthHttp,
