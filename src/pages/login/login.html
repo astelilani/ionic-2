@@ -1,22 +1,3 @@
-<!--<ion-view view-title="Login" name="login-view">
-  <ion-content class="padding">
-      <div class="list list-inset">
-          <label class="item item-input">
-              <input type="text" placeholder="Username" ng-model="data.username">
-          </label>
-          <label class="item item-input">
-              <input type="password" placeholder="Password" ng-model="data.password">
-          </label>
-      </div>
-      <button class="button button-block button-calm" ng-click="login()">Login</button>
-  </ion-content>
-</ion-view>-->
-<!--
-  Generated template for the Login page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
 	<ion-navbar>
@@ -31,17 +12,19 @@
 
 		<ion-item>
 			<ion-label floating>Username</ion-label>
-			<!--<ion-input [(ngModel)]="username" type="text" value=""></ion-input>-->
+			<ion-input [(ngModel)]="username" type="text" value=""></ion-input>
 		</ion-item>
 
 		<ion-item>
 			<ion-label floating>Password</ion-label>
-			<!--<ion-input [(ngModel)]="password" type="password" value=""></ion-input>-->
+			<ion-input [(ngModel)]="password" type="password" value=""></ion-input>
 		</ion-item>
 
 	</ion-list>
 
 	<div padding>
 		<button primary block (click)="login()">Sign In</button>
+		<button primary block (click)="signup()">Sign In</button>
+
 	</div>
 </ion-content>
